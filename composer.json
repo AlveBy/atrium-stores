@@ -1,0 +1,62 @@
+{
+    "name": "alveby/atrium-stores",
+    "description": "Stores for Atrium: addresses, phones, opening dates and a point on the map",
+    "type": "atrium-module",
+    "license": "MIT",
+    "homepage": "https://github.com/AlveBy/atrium",
+    "support": {
+        "issues": "https://github.com/AlveBy/atrium/issues",
+        "source": "https://github.com/AlveBy/atrium"
+    },
+    "keywords": [
+        "laravel",
+        "admin",
+        "cms",
+        "stores",
+        "map"
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^13.0",
+        "alveby/atrium": "^0.1"
+    },
+    "require-dev": {
+        "alveby/atrium-theme": "^0.1",
+        "orchestra/testbench": "^11.0",
+        "phpunit/phpunit": "^12.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atrium\\Stores\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Atrium\\Stores\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "atrium": {
+            "resources": [
+                "Atrium\\Stores\\Models\\Store"
+            ],
+            "public_urls": {
+                "Atrium\\Stores\\Models\\Store": {
+                    "prefix": "stores"
+                }
+            },
+            "migrations": "database/migrations",
+            "demo": "Atrium\\Stores\\Database\\StoresDemoSeeder"
+        },
+        "laravel": {
+            "providers": [
+                "Atrium\\Stores\\StoresServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
