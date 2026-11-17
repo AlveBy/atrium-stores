@@ -9,9 +9,11 @@ declare(strict_types=1);
 
 namespace Atrium\Stores\Models;
 
+use Atrium\Admin\Cache\CachesRecords;
 use Atrium\Admin\Columns\BooleanColumn;
 use Atrium\Admin\Columns\TextColumn;
 use Atrium\Admin\Contracts\Administrable;
+use Atrium\Admin\Contracts\Cacheable;
 use Atrium\Admin\Fields\CheckboxField;
 use Atrium\Admin\Fields\ContentField;
 use Atrium\Admin\Fields\DateTimeField;
@@ -34,9 +36,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property array<int,string>|null $phones
  * @property array<string,mixed>|null $location
  */
-class Store extends Model implements Administrable
+class Store extends Model implements Administrable, Cacheable
 {
-    use InteractsWithAdmin;
+    use CachesRecords, InteractsWithAdmin;
 
     protected $table = 'stores';
 
