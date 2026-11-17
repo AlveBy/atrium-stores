@@ -81,6 +81,12 @@ final class StoresModelTest extends TestCase
         Storage::disk('public')->assertExists('demo/outlet.svg');
     }
 
+    public function test_the_module_and_its_fields_are_called_by_their_own_translations(): void
+    {
+        $this->assertSame('Stores', Store::getAdminLabel());
+        $this->assertSame('Phones', Store::getAdministrationFields()[6]->toArray()['label']);
+    }
+
     public function test_the_texts_can_be_published(): void
     {
         $paths = ServiceProvider::pathsToPublish(StoresServiceProvider::class, 'atrium-stores-lang');
