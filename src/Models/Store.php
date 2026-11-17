@@ -67,7 +67,7 @@ class Store extends Model implements Administrable
             ImageField::make('preview_picture')->label(__('atrium::fields.standard.picture'))->directory('stores'),
             TextareaField::make('address')->label(__('atrium-stores::stores.fields.address')),
             RepeatableField::make('phones')->label(__('atrium-stores::stores.fields.phones'))->itemType('tel')->maxItems(5),
-            TextField::make('email')->label(__('atrium-stores::stores.fields.email'))->rules(['nullable', 'email']),
+            TextField::make('email')->label(__('atrium-stores::stores.fields.email'))->rules(['email']),
             DateTimeField::make('opens_at')->label(__('atrium-stores::stores.fields.opens_at')),
             MapField::make('location')->label(__('atrium-stores::stores.fields.location')),
             ContentField::make('detail_text')->label(__('atrium::fields.standard.description')),
