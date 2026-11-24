@@ -18,10 +18,10 @@
     "require": {
         "php": "^8.3",
         "illuminate/support": "^13.0",
-        "alveby/atrium": "^0.1"
+        "alveby/atrium": "^0.2"
     },
     "require-dev": {
-        "alveby/atrium-theme": "^0.1",
+        "alveby/atrium-theme": "^0.2",
         "orchestra/testbench": "^11.0",
         "phpunit/phpunit": "^12.5"
     },
@@ -54,7 +54,7 @@
             ]
         },
         "branch-alias": {
-            "dev-main": "0.1.x-dev"
+            "dev-main": "0.2.x-dev"
         }
     },
     "minimum-stability": "dev",
